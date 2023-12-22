@@ -1,0 +1,178 @@
+body {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+h2 {
+  text-align: center;
+}
+
+
+.logo {
+  width: 100px;
+}
+
+.title-box {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+
+.container {
+  display: flex;
+  width: 100%; /* Utilisez 100% de la largeur de la page */
+  justify-content: center;
+  
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  background-color: #f2f2f2;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Utilisez tout l'espace disponible */
+}
+
+.grid-item img {
+  max-width: 300px;
+  max-height: 300px;
+  height: auto;
+}
+
+  .single-column {
+    display: flex;
+    flex-direction: column;
+  margin-left: 5%;
+  gap: 10px;
+  background-color: #f2f2f2;
+  }
+  
+  .column-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Utilisez tout l'espace disponible */
+  }
+  .taille{
+    max-height: 200px;
+  max-width: 200px;
+  }
+  .tailleactivite {
+    max-width: 100%;
+    max-height: 70%;
+    height: auto;
+  }
+
+.single-horizon {
+  display: flex;
+  justify-content: space-around; /* Espace uniformément les éléments horizontalement */
+  width: 100%; /* Utilisez 100% de la largeur de la page */
+  background-color: #f2f2f2;
+}
+  section {
+    margin-bottom: 20px; /* Tu peux ajuster la valeur selon l'espace souhaité entre les sections */
+  }
+  
+  .content-wrapper {
+    display: flex;
+    
+  }
+  
+  .grid-wrapper {
+    display: block;
+    background-color: #f2f2f2;
+  }
+  
+  
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.footer-section {
+  margin-bottom: 10px;
+}
+
+
+/* Style général */
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+ 
+}
+
+p {
+  margin: 5px 0;
+}
+
+
+@media screen and (max-width: 1250px) {
+
+   
+    
+  .container {
+    margin: 0; /* Ajout de cette ligne pour centrer le conteneur */
+  }
+
+  .grid-item img,.taille ,.tailleactivite {
+    max-width: 175px;
+    max-height: 175px;
+  }
+
+
+
+}
+
+@media screen and (max-width: 850px) {
+
+
+  .container {
+    flex-direction: column;
+
+  }
+
+  .single-column, .single-horizon, .grid-container {
+    margin-left: 0;
+  }
+  .grid-item img {
+    max-width: 200px;
+    max-height: 400px;
+    
+  }
+  .grid-container, .single-horizon {
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    flex-direction: column;
+  }
+
+  .single-column,
+  .single-horizon {
+    margin-left: 0; /* Remove the margin-left property */
+  }
+
+  .tailleactivite,.taille{
+    max-width: 200px;
+    max-height: 250px;
+    
+  }
+
+  header ,footer{
+    font-size: small;
+  }
+
+  .grid-wrapper ,.content-wrapper{
+    display: block;
+  }
+
+}
